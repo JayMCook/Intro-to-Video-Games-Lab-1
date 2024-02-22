@@ -1,3 +1,10 @@
-[gd_scene format=3 uid="uid://ipoc0le4tqai"]
+[gd_scene load_steps=2 format=3 uid="uid://ckk11kgcm3o8v"]
+
+[ext_resource type="Texture2D" uid="uid://o72x3pujbpb8" path="res://silhouette.png" id="1_8h3pd"]
 
 [node name="SubCityScene" type="Node2D"]
+
+[node name="Silhouette" type="Sprite2D" parent="."]
+position = Vector2(109, 140)
+scale = Vector2(0.231395, 0.194342)
+texture = ExtResource("1_8h3pd")
