@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://demi47hypm5a4"]
+[gd_scene load_steps=5 format=3 uid="uid://demi47hypm5a4"]
 
 [ext_resource type="Texture2D" uid="uid://8kjuh7xqlrri" path="res://City Skyline.jpg" id="1_3a3so"]
 [ext_resource type="Texture2D" uid="uid://o72x3pujbpb8" path="res://silhouette.png" id="2_o6ht1"]
+[ext_resource type="Script" path="res://TestCharacter.gd" id="3_aulye"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4avfs"]
+size = Vector2(135, 207)
 
 [node name="CityScene" type="Node2D"]
 
@@ -15,7 +19,14 @@ position = Vector2(991.25, 565.938)
 scale = Vector2(0.152907, 0.114713)
 texture = ExtResource("2_o6ht1")
 
-[node name="Silhouette2" type="Sprite2D" parent="."]
-position = Vector2(88.9999, 552)
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("3_aulye")
+
+[node name="Silhouette2" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(144, 170)
 scale = Vector2(0.159302, 0.148053)
 texture = ExtResource("2_o6ht1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(142, 167)
+shape = SubResource("RectangleShape2D_4avfs")
